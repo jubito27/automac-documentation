@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automac | Documentation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2>Automac 🚀</h2>
+            <p>v0.1.1</p>
+        </div>
+        <ul>
+            <li><a href="#intro" class="active">Introduction</a></li>
+            <li><a href="#install">Installation</a></li>
+            <li><a href="#quickstart">Quick Start</a></li>
+            <li><a href="#autotuner">AutoTuner Class</a></li>
+            <li><a href="#parallel">Parallel Tuning</a></li>
+            <li><a href="#models">Supported Models</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <section id="intro">
+            <h1>Introduction</h1>
+            <p>Automac is a high-performance AutoML library designed to automate hyperparameter tuning using <strong>Optuna</strong> and <strong>Multithreading</strong>.</p>
+            <div class="info-card">
+                <strong>Why Automac?</strong> It handles the complexity of parallel execution and exhaustive search spaces so you can focus on the data.
+            </div>
+        </section>
+
+        <section id="install">
+            <h1>Installation</h1>
+            <p>Install the library directly from PyPI:</p>
+            <div class="code-block">
+                <pre><code>pip install automac</code></pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </section>
+
+        <section id="quickstart">
+            <h1>Quick Start</h1>
+            <p>Get started with just a few lines of code:</p>
+            <div class="code-block">
+                <pre><code>from automac import AutoTuner
+
+# Initialize with 50 trials per model
+tuner = AutoTuner(n_trials=50)
+
+# Run tuning for specific models
+results = tuner.tune(model_keys=['xgb', 'rf', 'lgb'])
+
+print(results)</code></pre>
+                <button class="copy-btn">Copy</button>
+            </div>
+        </section>
+
+        <section id="models">
+            <h1>Supported Models</h1>
+            <table class="model-table">
+                <thead>
+                    <tr>
+                        <th>Key</th>
+                        <th>Model Name</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>'rf'</code></td><td>Random Forest</td><td>Ensemble</td></tr>
+                    <tr><td><code>'xgb'</code></td><td>XGBoost</td><td>Boosting</td></tr>
+                    <tr><td><code>'svm'</code></td><td>Support Vector Machine</td><td>Linear/Non-linear</td></tr>
+                    <tr><td><code>'knn'</code></td><td>K-Nearest Neighbors</td><td>Instance-based</td></tr>
+                </tbody>
+            </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+:root {
+    --bg-color: #f9fafb;
+    --sidebar-bg: #ffffff;
+    --text-main: #111827;
+    --accent: #4f46e5;
+    --code-bg: #1e1e1e;
+    --border: #e5e7eb;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: var(--sidebar-bg);
+    border-right: 1px solid var(--border);
+    position: fixed;
+    padding: 2rem 1.5rem;
+}
+
+.sidebar-header h2 { color: var(--accent); margin-bottom: 0.5rem; }
+
+.sidebar ul { list-style: none; margin-top: 2rem; }
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #4b5563;
+    display: block;
+    padding: 0.75rem 0;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover, .sidebar ul li a.active { color: var(--accent); }
+
+/* Content Area */
+.content {
+    margin-left: 260px;
+    padding: 4rem;
+    max-width: 900px;
+}
+
+section { margin-bottom: 5rem; }
+
+h1 { font-size: 2.5rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+
+/* Code Blocks */
+.code-block {
+    background: var(--code-bg);
+    color: #d1d5db;
+    padding: 1.5rem;
+    border-radius: 8px;
+    position: relative;
+    font-family: 'Fira Code', monospace;
+    margin: 1rem 0;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #374151;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+/* Table */
+.model-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.model-table th, .model-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.model-table th { background: #f3f4f6; }
